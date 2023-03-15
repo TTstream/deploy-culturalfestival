@@ -36,6 +36,7 @@ public class Api {
     private String opar; // 개최장소
     private String fstvlStartDate; // 축제시작일시
     private String fstvlEndDate; // 축제종료일자
+    @Column(length = 1000)
     private String fstvlCo; // 축제내용
     private String mnnst; // 주관기관
     private String auspcInstt; // 주최기관

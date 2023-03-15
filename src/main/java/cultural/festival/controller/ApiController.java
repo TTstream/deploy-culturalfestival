@@ -2,7 +2,6 @@ package cultural.festival.controller;
 
 import cultural.festival.service.ApiService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -28,7 +27,7 @@ public class ApiController {
         String urlStr=url+"&"+
                 "serviceKey="+API_KEY+"&"+
                 "pageNo=1&"+
-                "numOfRows=102&"+
+                "numOfRows=1500&"+
                 "type=json";
         URL url=new URL(urlStr);
 
