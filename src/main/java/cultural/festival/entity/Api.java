@@ -1,15 +1,13 @@
 package cultural.festival.entity;
 
 import jakarta.persistence.*;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 @Entity
 @Table(name = "api")
 @Getter @Setter
 @ToString
+@NoArgsConstructor
 public class Api {
     /* ex)
     fstvlNm: "강원대학교 산학협력단 K-Digital Training 제2기 교육생 모집",
