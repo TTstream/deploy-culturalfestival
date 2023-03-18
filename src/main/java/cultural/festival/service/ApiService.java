@@ -1,13 +1,17 @@
 package cultural.festival.service;
 
+import cultural.festival.dto.ApiDto;
 import cultural.festival.entity.Api;
 import cultural.festival.repository.ApiRepository;
 import lombok.RequiredArgsConstructor;
+import org.checkerframework.checker.units.qual.A;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 @Service
 @Transactional
@@ -63,6 +67,11 @@ public class ApiService {
         }catch (Exception e){
             e.printStackTrace();
         }
+    }
+
+    //전체 데이터 index페이지로 전달
+    public List<Api> getApiData() {
+        return apiRepository.fstvlStart2021_();
     }
 
 }
