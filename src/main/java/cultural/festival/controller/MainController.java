@@ -17,7 +17,7 @@ public class MainController{
 
     private final ApiService apiService;
 
-    @GetMapping("/publicData")
+    @GetMapping("/")
     public String index(Model model){
 
         // 2021년 이후의 데이터를 내림차순으로 출력(최신 데이터부터 출력)
