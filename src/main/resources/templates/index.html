@@ -33,7 +33,7 @@
   <option value="4">2023년도</option>
   <option value="4">2024년도</option>
 </select>
-  <div>총건수 : <span th:text="${apiDataList.size()}"></span></div>
+  <div id="totalfestival">총건수 : <span th:text="${apiDataList.size()}"></span></div>
       
     <table class="table" style="border-top: none; border-bottom: none;">
       <thead>
@@ -44,8 +44,8 @@
             <th scope="col">축제종료일자</th> -->
         </tr>
       </thead>
-      <tbody th:each="apiDataDto, status: ${apiDataList}">
-        <tr>
+      <tbody id="info">
+        <tr th:each="apiDataDto, status: ${apiDataList}">
           <th scope="row" th:text="${status.count}"></th>
           <td th:text="${apiDataDto.fstvlNm}"></td>
         </tr>

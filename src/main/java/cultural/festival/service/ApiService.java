@@ -1,10 +1,8 @@
 package cultural.festival.service;
 
-import cultural.festival.dto.ApiDto;
 import cultural.festival.entity.Api;
 import cultural.festival.repository.ApiRepository;
 import lombok.RequiredArgsConstructor;
-import org.checkerframework.checker.units.qual.A;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
@@ -69,9 +67,15 @@ public class ApiService {
         }
     }
 
-    //전체 데이터 index페이지로 전달
+    //전체 데이터 controller로 전달
     public List<Api> getApiData() {
         return apiRepository.fstvlStart2021_();
     }
+
+    //필터링된 데이터 controller로 전달
+    public List<Api> getApiDynamicData(String year) {
+        return apiRepository.fstvlStartDynamic(year);
+    }
+
 
 }
