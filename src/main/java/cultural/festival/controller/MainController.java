@@ -38,7 +38,8 @@ public class MainController{
         // entity에서 받아온 데이터 DTO로 변환
         List<Api> apiDataList=apiService.getApiData(year);
         List<ApiDto> collect=apiDataList.stream()
-                .map(m-> new ApiDto(m.getFstvlNm(),m.getFstvlStartDate(),m.getFstvlEndDate(), m.getRdnmadr(), m.getLnmadr(),m.getFstvlCo()))
+                .map(m-> new ApiDto(m.getFstvlNm(),m.getFstvlStartDate(),m.getFstvlEndDate(), m.getRdnmadr(), m.getLnmadr(),m.getFstvlCo(),
+                        m.getLatitude(),m.getLongitude()))
                 .collect(Collectors.toList());
 
         model.addAttribute("collect",new Result(collect.size(),collect));

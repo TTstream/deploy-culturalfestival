@@ -16,7 +16,12 @@ public class ApiDto {
 
     private String rdnmadr; // 소재지도로명주소
 
-    private String lnmadr; // 소재지지번주소
+    private String lnmadr; // 소재지지번주소x
 
     private String fstvlCo; // 축제내용
+
+    private String latitude; // 위도
+
+    private String longitude; // 경도
+
 }
