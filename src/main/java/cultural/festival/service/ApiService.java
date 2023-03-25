@@ -68,8 +68,8 @@ public class ApiService {
     }
 
     //전체 데이터 controller로 전달
-    public List<Api> getApiData() {
-        return apiRepository.fstvlStart2021_();
+    public List<Api> getApiData(String year) {
+        return apiRepository.fstvlStartcurrent(year);
     }
 
     //필터링된 데이터 controller로 전달
