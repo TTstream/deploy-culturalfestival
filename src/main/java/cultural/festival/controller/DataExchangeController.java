@@ -13,7 +13,7 @@ import java.util.List;
 @RestController
 @RequiredArgsConstructor
 public class DataExchangeController {
-
+    /*
     private final ApiService apiService;
 
     @GetMapping("/yearSelect") // selectValue은 화면에서 선택한 년도
@@ -29,4 +29,6 @@ public class DataExchangeController {
         return apiDataList;
 
     }
+
+     */
 }
